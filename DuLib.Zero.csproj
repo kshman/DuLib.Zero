@@ -5,21 +5,23 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>Du</RootNamespace>
-    <RepositoryUrl>https://github.com/kshman/DuLib</RepositoryUrl>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.1.3</Version>
 
+    <RepositoryUrl>https://github.com/kshman/DuLib.Zero</RepositoryUrl>
+    <Version>1.1.3</Version>
     <Title>DuLib.Zero</Title>
     <PackageId>DuLib.Zero</PackageId>
     <Product>DuLib.Zero</Product>
     <Description>DuLib Zero</Description>    
     <Authors>kshman</Authors>
-    <PackageProjectUrl>https://github.com/kshman/DuLib</PackageProjectUrl>
-    <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
