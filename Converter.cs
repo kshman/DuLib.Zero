@@ -194,7 +194,7 @@ public static class Converter
         b = ch - 'A' + 10;
         if (b is >= 10 and <= 15)
             return (byte)b;
-        return 0;
+        return 255;
     }
 
     /// <summary>
@@ -212,6 +212,8 @@ public static class Converter
         for (int i = 0, u = 0; i < rawString.Length; i += 2, u++)
         {
             var b = HexCharToByte(rawString[i]) * 16 + HexCharToByte(rawString[i + 1]);
+			if (b >= 255)
+				return null;
             bs[u] = (byte)b;
         }
 
@@ -295,6 +297,8 @@ public static class Converter
         for (int i = 0, u = 0; i < compressedString.Length; i += 2, u++)
         {
             var b = HexCharToByte(compressedString[i]) * 16 + HexCharToByte(compressedString[i + 1]);
+			if (b >= 255)
+				return null;
             bs[u] = (byte)b;
         }
 

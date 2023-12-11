@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>Du</RootNamespace>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
 
     <RepositoryUrl>https://github.com/kshman/DuLib.Zero</RepositoryUrl>
-    <Version>1.1.3</Version>
+    <Version>1.1.4</Version>
     <Title>DuLib.Zero</Title>
     <PackageId>DuLib.Zero</PackageId>
     <Product>DuLib.Zero</Product>
@@ -18,9 +18,14 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
